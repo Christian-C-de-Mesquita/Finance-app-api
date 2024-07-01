@@ -7,17 +7,17 @@ export const pool = new Pool({
     password: process.env.POSTGRES_PASSWORD,
     port: process.env.POSTGRES_PORT,
     database: process.env.POSTGRES_DB,
-    host: process.env.POSTGRES_HOST,
+    host: process.env.POSTGRES_HOST
 })
 
 export const PostgresHelper = {
     query: async (query, params) => {
-        const client = await  pool.connect();
+        const client = await  pool.connect()
 
         const results = await client.query(query, params)
     
         await client.release()
 
         return results.rows
-    },
+    }
 }

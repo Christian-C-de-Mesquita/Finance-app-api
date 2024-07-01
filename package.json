@@ -1,24 +1,25 @@
 {
-  "name": "finance-app-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npx husky install"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^9.3.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "pg": "^8.12.0"
-  }
+    "name": "finance-app-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "npx husky install",
+        "migrations": "node src/db/postrgres/migrations/exec.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^9.3.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.5"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "pg": "^8.12.0"
+    }
 }
